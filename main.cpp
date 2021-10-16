@@ -1,7 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-
+/**
+ * Loads data from wordList.txt and puts it into vector for use later
+ * @param wordList the vector the strings will be loaded into
+ */
 void loadData(std::vector<std::string> &wordList)
 {
     std::string line;
@@ -14,7 +17,10 @@ void loadData(std::vector<std::string> &wordList)
         }
     }
 }
-
+/**
+ * Picks a random word of size 3 or more from the vector
+ * @param wordList the vector of words to pick from
+ */
 std::string pickWord(const std::vector<std::string> &wordList)
 {
     bool needSearch = true;
@@ -31,7 +37,12 @@ std::string pickWord(const std::vector<std::string> &wordList)
     }
     return "ERROR";
 }
-
+/**
+ * Finds all occurence of substring in string and returns vector of positions found, used for guesses
+ * @param vec vector of positions to be modified
+ * @param data string to search through
+ * @param toSearch char to search through
+ */
 void findAllOccurances(std::vector<int> &vec, std::string data, std::string toSearch)
 {
     int pos = data.find(toSearch);
