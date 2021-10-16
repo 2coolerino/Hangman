@@ -34,14 +34,10 @@ std::string pickWord(const std::vector<std::string> &wordList)
 
 void findAllOccurances(std::vector<int> &vec, std::string data, std::string toSearch)
 {
-    // Get the first occurrence
     int pos = data.find(toSearch);
-    // Repeat till end is reached
     while (pos != std::string::npos)
     {
-        // Add position to the vector
         vec.push_back(pos);
-        // Get the next occurrence from the current position
         pos = data.find(toSearch, pos + toSearch.size());
     }
 }
