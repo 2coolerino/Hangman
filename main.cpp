@@ -52,7 +52,9 @@ void findAllOccurances(std::vector<int> &vec, std::string data, std::string toSe
         pos = data.find(toSearch, pos + toSearch.size());
     }
 }
-
+/**
+ * Main method, plays the game itself
+ */
 void playHangMan()
 {
     bool keepPlaying = true;
@@ -100,7 +102,7 @@ void playHangMan()
             }
             if (done)
             {
-                std::cout << "Correctly guesses word: " << word << std::endl;
+                std::cout << "Correctly guessed word: " << word << std::endl;
                 return;
             }
         }
@@ -111,8 +113,11 @@ void playHangMan()
         }
     }
     std::cout << "Failed to guess word" << std::endl;
+    std::cout << "The word was " << word << std::endl;
 }
-
+/**
+ * Main method calls hangman method
+ */
 int main()
 {
     playHangMan();
