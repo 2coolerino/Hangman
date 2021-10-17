@@ -112,7 +112,7 @@ void playHangMan()
             guesses--;
         }
     }
-    std::cout << "Failed to guess word" << std::endl;
+    std::cout << "Failed to guess the word" << std::endl;
     std::cout << "The word was " << word << std::endl;
 }
 /**
